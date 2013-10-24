@@ -35,14 +35,14 @@ body {
 
 div#page-header {
   background: url('../img/header-bg.png') repeat-x #7E7E7E;
-  height: 245px;
+  height: 250px;
 }
 
 div#page-header #logo {
   height: 223px;
 	margin-left:auto;
 	margin-right:auto;
-	width: 960px;	
+	width: 960px;
 }
 
 div#page-header span.pile-label {
@@ -59,14 +59,14 @@ div#page-header #logo img {
 
 #page-header li.drag {
   position: absolute;
-  height: 180px;
+  height: 200px;
   left: 15px;
   overflow: hidden;
 }
-div#card-pile, div#discard-pile, div#question-pile {
+div#card-pile, div#discard-pile, div#question-pile, div#submit-area {
   border: 1px solid white;
   float: left;
-  height: 200px;
+  height: 215px;
   margin-top: 15px;
   margin-left: 15px;
   padding: 5px 10px;
@@ -74,15 +74,24 @@ div#card-pile, div#discard-pile, div#question-pile {
   position: relative;
 }
 
+div#submit-area {
+  border: none;
+  color: #FFFFFF;
+}
+
+div#submit-area-text {
+  margin-bottom: 1em;
+}
+
 div#home-page-wrapper, div#card-page-wrapper {
   background: url('../img/main-bg.png') repeat-x;
 }
 
-div.home-container {	
+div.home-container {
 	height: 500px;
 	margin-left: auto;
 	margin-right: auto;
-	width: 960px;	
+	width: 960px;
 }
 
 div#new-game {
@@ -166,6 +175,14 @@ input.text, select, textarea {
   -webkit-border-radius: 5px
 }
 
+input.text:disabled, select:disabled, textarea:disabled {
+  border: 1px solid #ddd;
+  color: #ccc;
+  background-image: -moz-linear-gradient(top, #f5f5f5, #ffffff );
+  background-image: -webkit-gradient( linear,left top, left bottom, color-stop(0, #f5f5f5), color-stop(1, #ffffff));
+  background-image: linear-gradient( top, #f5f5f5, #ffffff);
+}
+
 input.text {
   height: 35px;
   width: 99%;
@@ -226,9 +243,18 @@ div.column {
 .column-hover {
   background: #Fff97f;
 }
-li.drag {
+
+#card-surface li.drag {
     position: relative;
-    margin: 0 auto;
+    margin: -100px auto 0 auto;
+}
+
+#card-surface li.drag:first-child {
+    margin-top: 0px;
+}
+
+#card-surface li.drag:hover {
+    z-index: 100;
 }
 
 div.jira-card {
@@ -239,6 +265,11 @@ div.jira-card {
   overflow: hidden;
   padding: 5px 15px;
   width: 150px;
+  border-radius: 5px;
+}
+
+#card-surface li.drag:hover div.jira-card, #page-header li.drag:hover div.jira-card {
+  background: #cce8ff;
 }
 
 div.jira-card h2 {

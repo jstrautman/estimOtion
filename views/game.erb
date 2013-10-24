@@ -25,17 +25,94 @@
     <span class="pile-label">?</span>
     <ul id="question-pile-list"></ul>
   </div>
+  <div id="submit-area">
+    <div id="submit-area-text">Update JIRA with the results of the game.</div>
+    <input type="submit" class="submit" id="save-estimates-button" value="Save Estimates">
+    </div>
+  </div>
  </div>
 </div>
 
 <div id="card-page-wrapper">
   <div id="card-surface">
-    <div id="column-1" class="column clear"><ul id="column-1-list" class="column-list"></ul></div>
-    <div id="column-2" class="column"><ul id="column-2-list" class="column-list"></ul></div>
-    <div id="column-3" class="column"><ul id="column-3-list" class="column-list"></ul></div>
-    <div id="column-4" class="column"><ul id="column-4-list" class="column-list"></ul></div>
-    <div id="column-5" class="column"><ul id="column-5-list" class="column-list"></ul></div>
-    <div id="column-6" class="column"><ul id="column-6-list" class="column-list"></ul></div>
+    <div id="column-1" class="column clear">
+      <select id="column-1-estimate" class="game-column-estimate">
+        <option></option>
+        <option>1</option>
+        <option>2</option>
+        <option>4</option>
+        <option>8</option>
+        <option>16</option>
+        <option>32</option>
+        <option>64</option>
+      </select>
+      <ul id="column-1-list" class="column-list"></ul>
+    </div>
+    <div id="column-2" class="column">
+      <select id="column-2-estimate" class="game-column-estimate">
+        <option></option>
+        <option>1</option>
+        <option>2</option>
+        <option>4</option>
+        <option>8</option>
+        <option>16</option>
+        <option>32</option>
+        <option>64</option>
+      </select>
+      <ul id="column-2-list" class="column-list"></ul>
+    </div>
+    <div id="column-3" class="column">
+      <select id="column-3-estimate" class="game-column-estimate">
+        <option></option>
+        <option>1</option>
+        <option>2</option>
+        <option>4</option>
+        <option>8</option>
+        <option>16</option>
+        <option>32</option>
+        <option>64</option>
+      </select>
+      <ul id="column-3-list" class="column-list"></ul>
+    </div>
+    <div id="column-4" class="column">
+      <select id="column-4-estimate" class="game-column-estimate">
+        <option></option>
+        <option>1</option>
+        <option>2</option>
+        <option>4</option>
+        <option>8</option>
+        <option>16</option>
+        <option>32</option>
+        <option>64</option>
+      </select>
+      <ul id="column-4-list" class="column-list"></ul>
+    </div>
+    <div id="column-5" class="column">
+      <select id="column-5-estimate" class="game-column-estimate">
+        <option></option>
+        <option>1</option>
+        <option>2</option>
+        <option>4</option>
+        <option>8</option>
+        <option>16</option>
+        <option>32</option>
+        <option>64</option>
+      </select>
+      <ul id="column-5-list" class="column-list"></ul>
+    </div>
+    <div id="column-6" class="column">
+      <select id="column-6-estimate" class="game-column-estimate">
+        <option></option>
+        <option>1</option>
+        <option>2</option>
+        <option>4</option>
+        <option>8</option>
+        <option>16</option>
+        <option>32</option>
+        <option>64</option>
+      </select>
+      <ul id="column-6-list" class="column-list"></ul>
+    </div>
   </div>
 </div>
 <div id="initial-data" class="hidden">

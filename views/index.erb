@@ -13,7 +13,17 @@
       </div>
       <form id="new-game-form" method="post" class="<% if !flash.key?("errors") %>hidden<%end%>" action="/game/new">
         <input name="game-name" id="game-name" type="text" class="text" value="<%= flash["game-name"] ||= "Enter a game title..." %>" />
-        <textarea id="game-jql" name="game-jql"><%= flash["game-jql"] ||= "Enter your Jira JQL here..." %></textarea>
+        <input type="radio" name="game-type" value="game-rapid-board-id" id="game-type-rapid_board" checked="true">
+          <label for="game-type-rapid_board">Use a rapid board</label>
+        <select name="game-rapid-board-id" id="game-rapid-board-id">
+        <option value="">Select rapid board...</option>
+        <% boards.each do |board| %>
+          <option value="<%= board['id'] %>"><%= board['name'] %></option>
+        <% end %>                                                       -
+        </select>
+        <input type="radio" name="game-type" value="game-jql" id="game-type-jql">
+            <label for="game-type-jql">Build custom JQL</label>
+        <textarea id="game-jql" name="game-jql" disabled="true"><%= flash["game-jql"] ||= "Enter your Jira JQL here..." %></textarea>
         <input type="submit" class="submit" value="Create a Game">
       </form>
       <div id="errors" class="<% if !flash.key?("errors") %>hidden<%end%>">
